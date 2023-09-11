@@ -16,14 +16,14 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        /*DB::table('posts')->insert([
+        DB::table('posts')->insert([
             'user_id' => 1,
             'category_id' => 1,
             'content' => 'ピカチュウ可愛い><',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
+        
         
         DB::table('posts')->insert([
             'user_id' => 3,

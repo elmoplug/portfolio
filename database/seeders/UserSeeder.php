@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        /*DB::table('users')->insert([
+        DB::table('users')->insert([
             'name' => 'ピカチュウ',
             'email' => 'sample1@gmail.com',
             'password' => Hash::make('password1'),
@@ -26,9 +26,9 @@ class UserSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
         
-        /*DB::table('users')->insert([
+        
+        DB::table('users')->insert([
             'name' => 'よもぎ',
             'email' => 'sample2@gmail.com',
             'password' => Hash::make('password2'),
@@ -37,9 +37,9 @@ class UserSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
         
-        /*DB::table('users')->insert([
+        
+        DB::table('users')->insert([
             'name' => 'Bob',
             'email' => 'sample3@gmail.com',
             'password' => Hash::make('password3'),
@@ -48,9 +48,9 @@ class UserSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
         
-        /*DB::table('users')->insert([
+        
+        DB::table('users')->insert([
             'name' => '田中',
             'email' => 'sample4@gmail.com',
             'password' => Hash::make('password4'),
@@ -59,9 +59,9 @@ class UserSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
         
-        /*DB::table('users')->insert([
+        
+        DB::table('users')->insert([
             'name' => 'あああああ',
             'email' => 'sample5@gmail.com',
             'password' => Hash::make('password5'),
@@ -70,7 +70,7 @@ class UserSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ]);
-        */
+        
         
     }
 }
