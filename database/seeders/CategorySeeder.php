@@ -15,27 +15,27 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        /*DB::table('categories')->insert([
+        DB::table('categories')->insert([
                 'name' => 'ポケットモンスター'
          ]);
-         */
          
-         /*DB::table('categories')->insert([
+         
+         DB::table('categories')->insert([
                 'name' => 'モンスターハンター'
          ]);
-         */
          
-         /*DB::table('categories')->insert([
+         
+         DB::table('categories')->insert([
                 'name' => 'スーパーマリオブラザーズ'
          ]);
-         */
          
-         /*DB::table('categories')->insert([
+         
+         DB::table('categories')->insert([
                 'name' => '星のカービィ'
          ]);
-         */
          
-         /*DB::table('categories')->insert([
+         
+         DB::table('categories')->insert([
                 'name' => 'ゼルダの伝説'
          ]);
          
@@ -59,7 +59,7 @@ class CategorySeeder extends Seeder
                 'name' => 'マリオカート'
          ]);
          
-         */
+         
          
          DB::table('categories')->insert([
                 'name' => 'その他'
