@@ -16,10 +16,11 @@
         <hr>
         
         <h1>(ゲーム名)の投稿一覧</h1>
+        <a href='/posts/create'>create</a>
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
-                    <h2 class='user'>&emsp;😀{{ $post->name }}</h2>
+                    <h2 class='title'>&emsp;😀<a href="/posts/{{ $post->id }}">{{$post->user->name}}</a></h2>
                     <p class='content'>&emsp;&emsp;&emsp;{{ $post->content }}</p>
                     <p class='good'>&emsp;&emsp;👍</p>
                 </div>
