@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
+use App\Models\Reply;
 
 /**
  * Post一覧を表示する
@@ -16,18 +17,20 @@ use App\Models\Category;
 
 class PostController extends Controller
 {
-    public function index(Post $post)
+    public function index(Post $post,Reply $reply)
     {
         //return $post->get();
         //return view('posts.index')->with(['users' => $user->get()]); 
-        return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);  
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit()])->with(['replies'=>$reply->getPaginateByLimit()]);  
             
             
     }
         
     public function show(Post $post)
     {
-        return view('posts.show')->with(['post' => $post]);
+        //Postモデルのrepliesメソッド
+        $replies = $post->replies()->get();
+        return view('posts.show')->with(['post' => $post, 'replies' => $replies]);
         //'post'はbladeファイルで使う変数。中身は$postはid=1のPostインスタンス。
     }
     
@@ -44,4 +47,6 @@ class PostController extends Controller
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
+    
+    
 }
