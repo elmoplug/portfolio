@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReplyController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::post('/posts', [PostController::class, 'store']);
     Route::get('/posts/create', [PostController::class, 'create']);
+    
+    Route::post('/posts/like', [PostController::class, 'like'])->name('posts.like');
     Route::get('/posts/{post}', [PostController::class ,'show']);
+    
+    //カテゴリ分け
+    Route::get('/categories/{category}', [CategoryController::class,'index']);
     
     
     //返信機能
